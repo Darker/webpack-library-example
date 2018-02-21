@@ -3,6 +3,7 @@ var http = require('http');
 var port = process.env.PORT || 1337;
 
 const SERVERLESS = require("./dist/serverless_lib");
+// The serverless should be a function, since that's what I export in serverless_function.js
 if (typeof SERVERLESS != "function") {
     throw new Error("Webpack still didn't pack the export correctly!");
 }
